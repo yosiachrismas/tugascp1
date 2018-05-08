@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+	<title></title>
+</head>
+<body>
+	<ul>
+  <li><a class="active" href="index.html">Profil</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="registe.htmlr">Register</a></li>
+  <li><a href="terdaftar.html">LSP</a></li>
+  <a href="img/logosmk.png"></a>
+</ul>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari Siswa..." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:100%;">Nama Siswa Terdaftar</th>
+  </tr>
+  <tr>
+    <td>1. Hendro Siswanto</td>
+  </tr>
+  <tr>
+    <td>2. Rahkmat Darjo</td>
+  </tr>
+  <tr>
+    <td>3. Djoko Bowo</td>
+  </tr>
+  <tr>
+    <td>4. jummaroh </td>
+  </tr>
+  <tr>
+    <td>5. Heri Faruk</td>
+  </tr>
+  <tr>
+    <td>6. Siswanty Kurnia</td>
+  </tr>
+  <tr>
+    <td>7. Dhita Ani</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>                      
